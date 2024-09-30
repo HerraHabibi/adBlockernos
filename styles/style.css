@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Play';
+  src: url('../fonts/play-400.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Play';
+  src: url('../fonts/play-700.woff2') format('woff');
+  font-weight: bold;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Play, sans-serif;
+  color: #f0f0f0;
+}
+
+body {
+  width: 200px;
+  height: 120px;
+  background-color: #161c21;
+}
+
+header {
+  background-color: #2d3943;
+  padding: 15px 0;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: default;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #2b87d3;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+button:hover {
+  background-image: linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08));
+}
+
+a {
+  display: block;
+  font-weight: 10;
+  text-underline-offset: 3px;
+}
