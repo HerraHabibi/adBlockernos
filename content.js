@@ -20,6 +20,15 @@ function eliminarAnuncios() {
       anuncios[0].parentNode.removeChild(anuncios[0]);
     }
   });
+
+  // Eliminar todos los elementos con z-index: 2147483646
+  const elementos = document.querySelectorAll('*');
+  elementos.forEach(elemento => {
+    const zIndex = window.getComputedStyle(elemento).getPropertyValue('z-index');
+    if (zIndex === '2147483646') {
+      elemento.parentNode.removeChild(elemento);
+    }
+  });
   
   // Reajustar el header
   const header = document.querySelector('.header');
@@ -53,4 +62,4 @@ function observarAnuncios() {
 setTimeout(() => {
   eliminarAnuncios();
   observarAnuncios();
-}, 1000);
+}, 2000);
