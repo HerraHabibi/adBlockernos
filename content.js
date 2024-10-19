@@ -1,3 +1,5 @@
+const tiempoEspera = 2; // Tiempo en segundos
+
 function eliminarAnuncios() {
   // Identificar elementos con anuncios
   const clasesAnuncios = [
@@ -62,4 +64,4 @@ function observarAnuncios() {
 setTimeout(() => {
   eliminarAnuncios();
   observarAnuncios();
-}, 2000);
+}, tiempoEspera * 1000);
