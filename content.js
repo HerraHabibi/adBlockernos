@@ -52,15 +52,11 @@ function observarAnuncios() {
     }
   });
 
-  // Configuración observador: Se observan los nodos observados y sus hijos
-  const config = { childList: true, subtree: true };
-
-  // Establecer el body como el nodo observado y lo inicia
-  const targetNode = document.body;
-  observador.observe(targetNode, config);
+  // Establecer el body y sus hijos como los nodos observados e inicia el observador
+  observador.observe(document.body, { childList: true, subtree: true });
 }
 
-// Ejecutar eliminarAnuncios al cargar la página
+// Ejecutar extensión al cargar la página
 setTimeout(() => {
   eliminarAnuncios();
   observarAnuncios();
