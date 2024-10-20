@@ -46,7 +46,4 @@ function eliminarAnuncios() {
   const header = document.querySelector('.header');
   header.style.display = 'flex';
   header.style.justifyContent = 'space-between';
-
-  // Avisar de que se han eliminado anuncios
-  console.log('%cadBlockernos%c »%c Anuncios eliminados', 'color: #2d8fe0; font-size: 20px; background-color: #282828; padding: 4px', 'color: #1fd78d; font-size: 20px; background-color: #282828; padding: 4px', 'color: #f0f0f0; font-size: 20px; background-color: #282828; padding: 4px');
 }
