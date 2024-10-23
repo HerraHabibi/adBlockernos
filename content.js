@@ -23,11 +23,11 @@ function eliminarAnuncios() {
     }
   });
 
-  // Eliminar todos los elementos con z-index: 2147483646
+  // Eliminar todos los elementos con z-index: >= 2147483640
   const elementos = document.querySelectorAll('*');
   elementos.forEach(elemento => {
-    const zIndex = window.getComputedStyle(elemento).getPropertyValue('z-index');
-    if (zIndex === '2147483646') {
+    const zIndex = parseInt(window.getComputedStyle(elemento).getPropertyValue('z-index'));
+    if (zIndex >= 2147483640) {
       elemento.parentNode.removeChild(elemento);
     }
   });
